@@ -1,42 +1,47 @@
 # Student Portal Backend
 
-Spring Boot + Apache Camel backend for the Student Registration and Course Enrollment Portal.
+Spring Boot and Apache Camel backend for the Student Registration and Course Enrollment Portal.
 
-## Required Database
+## Technology Stack
 
-Create a PostgreSQL database:
+- Java 17
+- Spring Boot
+- Apache Camel
+- Maven
+- PostgreSQL
+
+## Database
+
+Create the PostgreSQL database:
 
 ```sql
 CREATE DATABASE student_portal;
 ```
 
-Default connection in `src/main/resources/application.properties`:
+The backend uses this connection:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/student_portal
-spring.datasource.username=${DB_USERNAME:postgres}
-spring.datasource.password=${DB_PASSWORD:postgres}
+spring.datasource.url=${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/student_portal}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:postgres}}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:postgres}}
 ```
 
-If your local PostgreSQL password is not `postgres`, set environment variables before running:
+Do not commit your real database password. Set it when running the project.
 
-```bash
-set DB_USERNAME=postgres
-set DB_PASSWORD=your_password
-```
+## Run Backend
 
-## Run
+From the `backend` folder:
 
-From `backend/`:
-
-```bash
+```powershell
+$env:DB_USERNAME="postgres"
+$env:DB_PASSWORD="your_postgresql_password"
 mvn spring-boot:run
 ```
 
-The backend runs at:
+The backend runs on:
 
 ```text
-http://localhost:8080
+http://localhost:8082
 ```
 
 ## APIs

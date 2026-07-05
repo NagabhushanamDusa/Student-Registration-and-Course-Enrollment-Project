@@ -3,10 +3,10 @@
   "name": "student-registration-course-enrollment-frontend",
   "version": "1.0.0",
   "private": true,
-  "proxy": "http://localhost:8081",
+  "proxy": "http://localhost:8082",
   "scripts": {
     "start": "react-scripts start",
-    "build": "set \"NODE_OPTIONS=--max-old-space-size=4096\" && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

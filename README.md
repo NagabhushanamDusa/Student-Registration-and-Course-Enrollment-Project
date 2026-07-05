@@ -48,7 +48,7 @@ mvn spring-boot:run
 Backend runs at:
 
 ```text
-http://localhost:8081
+http://localhost:8082
 ```
 
 ## Run Frontend
@@ -74,3 +74,7 @@ http://localhost:3000
 - `GET /api/courses`
 - `POST /api/enrollments`
 - `GET /api/enrollments`
+
+## Deployment
+
+See `DEPLOYMENT.md` for the Vercel + Render + Neon deployment steps.

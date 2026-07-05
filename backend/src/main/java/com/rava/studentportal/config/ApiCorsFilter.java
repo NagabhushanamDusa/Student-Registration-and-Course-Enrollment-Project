@@ -4,6 +4,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
@@ -13,15 +14,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.Set;
+import java.util.List;
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class ApiCorsFilter extends OncePerRequestFilter {
-    private static final Set<String> ALLOWED_ORIGINS = Set.of(
-            "http://localhost:3000",
-            "http://127.0.0.1:3000"
-    );
+    private final List<String> allowedOrigins;
+
+    public ApiCorsFilter(@Value("${app.cors.allowed-origins}") List<String> allowedOrigins) {
+        this.allowedOrigins = allowedOrigins;
+    }
 
     @Override
     protected void doFilterInternal(
@@ -30,7 +32,7 @@ public class ApiCorsFilter extends OncePerRequestFilter {
             FilterChain filterChain
     ) throws ServletException, IOException {
         String origin = request.getHeader(HttpHeaders.ORIGIN);
-        if (origin != null && ALLOWED_ORIGINS.contains(origin)) {
+        if (origin != null && allowedOrigins.contains(origin)) {
             response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, origin);
         }
         response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "GET,POST,OPTIONS");
