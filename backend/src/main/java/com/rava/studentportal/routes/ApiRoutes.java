@@ -59,7 +59,7 @@ public class ApiRoutes extends RouteBuilder {
                 .component("servlet")
                 .bindingMode(RestBindingMode.json)
                 .dataFormatProperty("prettyPrint", "true")
-                .enableCORS(true);
+                
 
         rest("/")
                 .post("/students")
