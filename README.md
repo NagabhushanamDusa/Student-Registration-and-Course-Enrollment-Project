@@ -313,6 +313,8 @@ Add screenshots of the completed pages here before final submission:
 ```text
 docs/screenshots/home-page.png
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4a987388-95dd-450e-8b56-0909e6f398f6" />
+
 
 ### Register Student Page
 
@@ -336,7 +338,7 @@ docs/screenshots/course-enrollment-page.png
 
 ```text
 docs/screenshots/enrollment-list-page.png
-```
+`
 
 ## Notes
 
