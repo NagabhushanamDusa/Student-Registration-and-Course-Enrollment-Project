@@ -309,39 +309,17 @@ APP_CORS_ALLOWED_ORIGINS=https://your-vercel-url,http://localhost:3000
 Add screenshots of the completed pages here before final submission:
 
 ### Home Page
-
-```text
-docs/screenshots/home-page.png
-```
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4a987388-95dd-450e-8b56-0909e6f398f6" />
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b38e8813-93e8-42f3-b7c8-9b2a4a3e12d0" />
 
 ### Register Student Page
-
-```text
-docs/screenshots/register-student-page.png
-```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6946a81a-44b0-4387-a463-591dc28bb86f" />
 
 ### Student List Page
-
-```text
-docs/screenshots/student-list-page.png
-```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e860208a-1419-4e57-8e96-2f1c79019301" />
 
 ### Course Enrollment Page
-
-```text
-docs/screenshots/course-enrollment-page.png
-```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1d7cc372-dd97-4574-93bc-8ca13412cdee" />
 
 ### Enrollment List Page
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d4c5c52a-d199-443a-b70b-f0df54273b49" />
 
-```text
-docs/screenshots/enrollment-list-page.png
-`
-
-## Notes
-
-- Do not commit real database passwords or `.env` files.
-- `node_modules`, React build output, and Maven `target` output are ignored by Git.
-- Use Postman or browser testing to verify the API endpoints.
