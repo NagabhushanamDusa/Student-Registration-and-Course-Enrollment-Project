@@ -302,7 +302,7 @@ Backend CORS origins are configured with:
 
 ```text
 https://your-vercel-url,http://localhost:3000
-``
+```
 
 ## Screenshots
 
