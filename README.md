@@ -301,8 +301,8 @@ REACT_APP_API_BASE_URL=https://your-render-backend-url
 Backend CORS origins are configured with:
 
 ```text
-APP_CORS_ALLOWED_ORIGINS=https://your-vercel-url,http://localhost:3000
-```
+https://your-vercel-url,http://localhost:3000
+``
 
 ## Screenshots
 
